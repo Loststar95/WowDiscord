@@ -24,7 +24,7 @@ async def on_ready():
         now = datetime.utcnow() - timedelta(hours=6)  # 📌 Restar 6 horas a UTC
         formatted_time = now.strftime("%H:%M")  # Solo horas y minutos
         try:
-            await channel.edit(name=f"🕒 {formatted_time}")
+            await channel.edit(name=f"🕒│ Server Time: {formatted_time}")
             print(f"Canal actualizado: {formatted_time}")
         except discord.errors.Forbidden:
             print("⚠️ No tengo permisos para cambiar el nombre del canal.")
