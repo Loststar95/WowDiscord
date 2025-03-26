@@ -11,11 +11,6 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # ID del canal donde quieres mostrar la hora
 CHANNEL_ID = 1354268659828260985  # Cambia esto por el ID real de tu canal
 
-def obtener_hora_utc_menos_6():
-    hora_utc = datetime.utcnow()
-    hora_utc_menos_6 = hora_utc - datetime.timedelta(hours=6)
-    return hora_utc_menos_6.strftime("%H:%M:%S")
-
 @bot.event
 async def on_ready():
     print(f"Bot conectado como {bot.user}")
@@ -26,10 +21,11 @@ async def on_ready():
         return
 
     while True:
-        now = obtener_hora_utc_menos_6()  # Obtener la hora actual
+        now = datetime.utcnow() - timedelta(hours=6)  # 📌 Restar 6 horas a UTC
+        formatted_time = now.strftime("%H:%M")  # Solo horas y minutos
         try:
-            await channel.edit(name=f"🕒│Hora Server: {now}")
-            print(f"Canal actualizado: {now}")
+            await channel.edit(name=f"🕒│Hora Server: {formatted_time}")
+            print(f"Canal actualizado: {formatted_time}")
         except discord.errors.Forbidden:
             print("⚠️ No tengo permisos para cambiar el nombre del canal.")
         except discord.errors.HTTPException as e:
