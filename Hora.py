@@ -13,11 +13,9 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 CHANNEL_ID = 1354268659828260985  # Cambia esto por el ID real de tu canal
 
 def obtener_hora_utc_menos_6():
-    """Obtiene la hora actual en la zona horaria UTC-6 y la formatea."""
-    zona_horaria_utc_menos_6 = pytz.timezone('America/Chicago') # O 'Etc/GMT-6'
-    hora_actual_utc_menos_6 = datetime.datetime.now(zona_horaria_utc_menos_6)
-    hora_formateada = hora_actual_utc_menos_6.strftime("%H:%M:%S")
-    return hora_formateada
+    hora_utc = datetime.datetime.utcnow()
+    hora_utc_menos_6 = hora_utc - datetime.timedelta(hours=6)
+    return hora_utc_menos_6.strftime("%H:%M:%S")
 
 @bot.event
 async def on_ready():
