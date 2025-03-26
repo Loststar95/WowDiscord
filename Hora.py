@@ -1,7 +1,7 @@
 import discord
 import asyncio
 import os  # Para leer variables de entorno
-from datetime import datetime
+from datetime import datetime, timedelta
 from discord.ext import commands
 
 # Configurar permisos
