@@ -1,6 +1,5 @@
 import discord
 import asyncio
-import pytz
 import os  # Para leer variables de entorno
 from datetime import datetime
 from discord.ext import commands
