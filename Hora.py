@@ -9,7 +9,7 @@ intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # ID del canal donde quieres mostrar la hora
-CHANNEL_ID = 123456789012345678  # Cambia esto por el ID real de tu canal
+CHANNEL_ID = 1354268659828260985  # Cambia esto por el ID real de tu canal
 
 @bot.event
 async def on_ready():
