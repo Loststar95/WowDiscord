@@ -1,5 +1,3 @@
-
-
 import discord
 import asyncio
 from datetime import datetime
@@ -26,5 +24,5 @@ async def on_ready():
         await asyncio.sleep(300)  # Espera 60 segundos antes de actualizar
 
 # Inicia el bot con tu token
-TOKEN = "MTM1NDE4ODc3NzQ3MTM0ODg2Nw.GayC1E.Km1SshepPb4iI3NahsViuzBU8b4KtKP9Jumk9o"
+TOKEN = os.getenv("STTOKEN")
 bot.run(TOKEN)
