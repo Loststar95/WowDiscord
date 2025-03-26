@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # ID del canal donde quieres mostrar la cuenta regresiva
-CHANNEL_ID = 1354303375088291952  # Cambia esto por el ID real de tu canal
+CHANNEL_ID = 1354314274062995647  # Cambia esto por el ID real de tu canal
 
 # Fecha de la raid (15 de abril a las 20:00 UTC-6)
 raid_date = datetime(2025, 4, 15, 20, 0)  # 📌 Cambia el año si es en 2026 o más
