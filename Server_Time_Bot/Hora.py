@@ -26,5 +26,5 @@ async def on_ready():
         await asyncio.sleep(300)  # Espera 60 segundos antes de actualizar
 
 # Inicia el bot con tu token
-TOKEN = "STTOKEN"
+TOKEN = os.getenv("STTOKEN")
 bot.run(TOKEN)
