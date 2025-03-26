@@ -49,6 +49,6 @@ async def on_ready():
         await asyncio.sleep(600)  # Se actualiza cada 10 minutos
 
 # Leer el token desde las variables de entorno
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("RDTOKEN")
 
 bot.run(TOKEN)
