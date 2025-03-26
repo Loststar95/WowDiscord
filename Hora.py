@@ -21,9 +21,9 @@ async def on_ready():
         return
 
     while True:
-        now = datetime.now().strftime("%H:%M:%S")  # Obtener la hora actual
+        now = datetime.now().strftime("%H:%M")  # Obtener la hora actual
         try:
-            await channel.edit(name=f"🕒 {now}")
+            await channel.edit(name=f"🕒│Hora Server: {now}")
             print(f"Canal actualizado: {now}")
         except discord.errors.Forbidden:
             print("⚠️ No tengo permisos para cambiar el nombre del canal.")
