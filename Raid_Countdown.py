@@ -39,7 +39,7 @@ async def on_ready():
             countdown_text = "🎉 **¡La raid ha comenzado!** 🏹🔥⚔️"
 
         try:
-            await channel.edit(name=f"🕒 {countdown_text}")
+            await channel.edit(name=f"{countdown_text}")
             print(f"Canal actualizado: {countdown_text}")
         except discord.errors.Forbidden:
             print("⚠️ No tengo permisos para cambiar el nombre del canal.")
