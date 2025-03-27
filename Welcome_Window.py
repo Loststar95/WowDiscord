@@ -59,16 +59,18 @@ class ClassButton(Button):
     def __init__(self, class_name, emoji, view):
         super().__init__(style=discord.ButtonStyle.primary, label=class_name, emoji=emoji)
         self.class_name = class_name
-        self.view = view
+        self.parent_view = view  # ✅ Guardamos la referencia en otra variable
+
 
     async def callback(self, interaction: discord.Interaction):
-        if self.class_name in self.view.selected_classes:
-            self.view.selected_classes.remove(self.class_name)
+        if self.class_name in self.parent_view.selected_classes:
+            self.parent_view.selected_classes.remove(self.class_name)
         else:
-            self.view.selected_classes.add(self.class_name)
-        
-        await self.view.update_roles()
-        await interaction.response.defer()  # Evita el mensaje de "pensando..."
+            self.parent_view.selected_classes.add(self.class_name)
+    
+        await self.parent_view.update_roles()
+        await interaction.response.defer()
+
 
 @bot.event
 async def on_ready():
