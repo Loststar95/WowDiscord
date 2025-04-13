@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 CHANNEL_ID = 1354636635081539784  # Cambia esto por el ID real de tu canal
 
 # Fecha de la raid (15 de abril a las 20:00 UTC-6)
-raid_date = datetime(2025, 4, 15, 20, 0)  # 📌 Cambia el año si es en 2026 o más
+raid_date = datetime(2025, 4, 18, 20, 0)  # 📌 Cambia el año si es en 2026 o más
 
 @bot.event
 async def on_ready():
@@ -46,6 +46,7 @@ async def on_ready():
         except discord.errors.HTTPException as e:
             print(f"⚠️ Error de Discord: {e}")
 
+        print(datetime.utcnow)
         await asyncio.sleep(600)  # Se actualiza cada 10 minutos
 
 # Leer el token desde las variables de entorno
