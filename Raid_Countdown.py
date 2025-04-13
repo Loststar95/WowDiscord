@@ -46,7 +46,7 @@ async def on_ready():
         except discord.errors.HTTPException as e:
             print(f"⚠️ Error de Discord: {e}")
 
-        print(datetime.utcnow)
+        print(now)
         await asyncio.sleep(600)  # Se actualiza cada 10 minutos
 
 # Leer el token desde las variables de entorno
