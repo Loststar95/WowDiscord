@@ -37,7 +37,7 @@ async def on_ready():
             countdown_text = f"⏳│ Raid: {days} días, {hours} horas"
         else:
             # countdown_text = "🎉 **¡La raid ha comenzado!** 🏹🔥⚔️"
-            countdown_text = "** Por Definir **🔥"
+            countdown_text = "⏳│ Raid: Por Definir🔥"
 
         try:
             await channel.edit(name=f"{countdown_text}")
