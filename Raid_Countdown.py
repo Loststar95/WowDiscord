@@ -34,7 +34,7 @@ async def on_ready():
             hours = remaining_time.seconds // 3600
             minutes = (remaining_time.seconds % 3600) // 60
 
-            countdown_text = f"⏳│ ZG Core 2: {days} días, {hours} horas"
+            countdown_text = f"⏳│ Zul'Gurub (C2): {days} días, {hours} horas"
         else:
             countdown_text = "🎉 **¡La raid ha comenzado!** 🏹🔥⚔️"
             # countdown_text = "⏳│ Raid: Por Definir🔥"
