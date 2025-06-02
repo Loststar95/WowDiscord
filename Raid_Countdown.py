@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 CHANNEL_ID = 1363964420648079427  # Cambia esto por el ID real de tu canal
 
 # Fecha de la raid (15 de abril a las 20:00 UTC-6)
-raid_date = datetime(2025, 5, 25, 18, 0)  # 📌 Cambia el año si es en 2026 o más
+raid_date = datetime(2025, 6, 04, 19, 0)  # 📌 Cambia el año si es en 2026 o más
 
 @bot.event
 async def on_ready():
