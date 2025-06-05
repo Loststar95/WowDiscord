@@ -14,7 +14,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 CHANNEL_ID = 1363964420648079427  # Cambia esto por el ID real de tu canal
 
 # Fecha de la raid (15 de abril a las 20:00 UTC-6)
-raid_date = datetime(2025, 6, 4, 19, 0)  # 📌 Cambia el año si es en 2026 o más
+raid_date = datetime(2025, 6, 5, 19, 0)  # 📌 Cambia el año si es en 2026 o más
 
 @bot.event
 async def on_ready():
@@ -34,7 +34,7 @@ async def on_ready():
             hours = remaining_time.seconds // 3600
             minutes = (remaining_time.seconds % 3600) // 60
 
-            countdown_text = f"⏳│ Zul'Gurub (C2): {days} días, {hours} horas"
+            countdown_text = f"⏳│ Onyxia: {days} días, {hours} horas"
         else:
             countdown_text = "🎉 **¡La raid ha comenzado!** 🏹🔥⚔️"
             # countdown_text = "⏳│ Raid: Por Definir🔥"
