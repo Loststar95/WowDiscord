@@ -10,11 +10,11 @@ from discord.ext import commands
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# ID del canal donde quieres mostrar la cuenta regresiva
-CHANNEL_ID = 1363964420648079427  # Cambia esto por el ID real de tu canal
+# ID del canal donde para cuenta regresiva
+CHANNEL_ID = 1363964420648079427 
 
-# Fecha de la raid (15 de abril a las 20:00 UTC-6)
-raid_date = datetime(2025, 6, 5, 19, 0)  # 📌 Cambia el año si es en 2026 o más
+# Fecha de la raid 
+raid_date = datetime(2025, 6, 22, 19, 0) 
 
 @bot.event
 async def on_ready():
@@ -34,7 +34,7 @@ async def on_ready():
             hours = remaining_time.seconds // 3600
             minutes = (remaining_time.seconds % 3600) // 60
 
-            countdown_text = f"⏳│ Onyxia: {days} días, {hours} horas"
+            countdown_text = f"⏳│ Molten Core: {days} días, {hours} horas"
         else:
             countdown_text = "🎉 **¡La raid ha comenzado!** 🏹🔥⚔️"
             # countdown_text = "⏳│ Raid: Por Definir🔥"
